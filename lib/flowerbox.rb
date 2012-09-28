@@ -4,7 +4,7 @@ module Flowerbox
   if Rails.env == "development"
     def flowerbox *objs
       info "=" * 80
-      info caller[0]
+      info caller[1]
       objs.each do |o|
         info "-" * 80
         info o.inspect
