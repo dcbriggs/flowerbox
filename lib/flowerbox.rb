@@ -23,9 +23,8 @@ module Flowerbox
   enable "development"
 end
 
-begin
-  ActiveSupport::BufferedLogger.send(:include, Flowerbox)
-  Logger.send(:include, Flowerbox)
-rescue nil
-end
+
+ActiveSupport::BufferedLogger.send(:include, Flowerbox)
+Logger.send(:include, Flowerbox)
+
 
